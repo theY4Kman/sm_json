@@ -51,9 +51,15 @@ native Handle:JSON_Parse(const String:json[]="",
 
 
 /**
- * Retrieve the string representation of 
+ * Retrieve the string representation of the JSON value.
+ * 
+ * @param   json_value      A handle to a JSON value
+ * @param   buffer          Buffer to store the encoded JSON value
+ * @param   maxlength       Maximum size of the string buffer
+ * @param   flags           Flags instructing the encoder how to dump values
  */
-native JSON_Dumps(Handle:json_value, String:buffer[], maxlength, flags=JSON_ENCODE_ANY);
+native JSON_Dumps(Handle:json_value, String:buffer[], maxlength,
+                  flags=JSON_ENCODE_ANY);
 
 /**
  * Returns the type of the JSON value.
